@@ -1,0 +1,78 @@
+{
+    "name": "express-boilerplate",
+    "version": "0.0.1",
+    "description": "install d'express avec qq packages courants et qq middlewares de gestion d'erreurs",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "vuejs": "npm i --prefix front && npm run dev --prefix front",
+        "test": "jest",
+        "docker:build:up": "cp .env.example .env && npm i && docker compose up --build",
+        "docker:up": "docker compose up",
+        "docker:test": "docker compose run --rm  npm test",
+        "docker:demo": "docker compose run --rm node",
+        "pull:prof": "git pull prof my-students-at-work --allow-unrelated-histories --no-edit -X theirs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/O-clock-Alternance-CDA/express-boilerplate.git"
+    },
+    "keywords": [
+        "express",
+        "boilerplate",
+        "branch",
+        "redis",
+        "postgresql",
+        "mongodb",
+        "express-validator"
+    ],
+    "author": "oClock",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/O-clock-Alternance-CDA/express-boilerplate/issues"
+    },
+    "homepage": "https://github.com/O-clock-Alternance-CDA/express-boilerplate#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-validator": "^6.14.2",
+        "redis": "^4.5.0"
+    },
+    "devDependencies": {
+        "jest": "^29.3.1",
+        "node-mocks-http": "^1.12.1",
+        "nodemon": "^2.0.20",
+        "supertest": "^6.3.1"
+    },
+    "prettier": {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "overrides": [
+            {
+                "files": "*.js",
+                "options": {
+                    "parser": "babel"
+                }
+            },
+            {
+                "files": "*.json",
+                "options": {
+                    "parser": "json",
+                    "tabWidth": 4
+                }
+            }
+        ],
+        "semi": true,
+        "requirePragma": false,
+        "proseWrap": "preserve",
+        "arrowParens": "avoid",
+        "htmlWhitespaceSensitivity": "css",
+        "quoteProps": "as-needed"
+    }
+}
